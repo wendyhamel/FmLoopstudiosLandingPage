@@ -16,9 +16,12 @@
       theme: {
         fontFamily: {
           'sans': ['Alata', 'sans-serif'],
-          'heading': ['Josefin Sans', 'sans-serif'],
+          'display': ['Josefin Sans', 'sans-serif'],
         },
         extend: {
+          fontSize: {
+            'body': '15px',
+          },
           colors: {
             gray: 'hsl(0, 0%, 55%)',
             dark: 'hsl(0, 0%, 41%)',
@@ -45,7 +48,7 @@
 <header class="relative text-white">
   <img class="absolute md:hidden" src="images/mobile/image-hero.jpg" alt="">
   <img class="hidden md:block md:absolute" src="images/desktop/image-hero.jpg" alt="">
-  <div class="relative flex justify-between">
+  <div class="relative flex justify-between items-center gap-4 pt-8 px-6">
     <div>
       <img src="images/logo.svg" alt="loopstudios logo">
       <h1 class="sr-only">Loopstudios</h1>
@@ -62,20 +65,20 @@
             x-show="open"
             x-transition.opacity.origin.top
             style="display: hidden;"
-            class="fixed z-10 inset-0 bg-black text-white"
+            class="fixed z-10 inset-0 bg-black text-white pt-8 px-6"
         >
-          <div class="flex justify-between">
+          <div class="flex justify-between items-center gap-4 mb-24">
             <img src="images/logo.svg" alt="loopstudios logo">
             <button x-on:click="open = false">
               <img src="images/icon-close.svg" alt="close the menu">
             </button>
           </div>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Support</a></li>
+          <ul class="font-display uppercase text-xl space-y-4">
+            <li><a class="pb-1 border-b-2 border-transparent hover:border-white" href="#">About</a></li>
+            <li><a class="pb-1 border-b-2 border-transparent hover:border-white" href="#">Careers</a></li>
+            <li><a class="pb-1 border-b-2 border-transparent hover:border-white" href="#">Events</a></li>
+            <li><a class="pb-1 border-b-2 border-transparent hover:border-white" href="#">Products</a></li>
+            <li><a class="pb-1 border-b-2 border-transparent hover:border-white" href="#">Support</a></li>
           </ul>
         </div>
       </div>
@@ -90,7 +93,7 @@
       </div>
     </nav>
   </div>
-  <span class="relative font-heading uppercase">
+  <span class="relative font-display uppercase">
     Immersive experiences that deliver
   </span>
 </header>
@@ -99,7 +102,7 @@
   <img src="images/mobile/image-interactive.jpg" alt="man wearing vr-glasses">
   <article>
     <h2>The leader in interactive VR</h2>
-    <p> Founded in 2011, Loopstudios has been producing world-class virtual reality
+    <p class="text-body"> Founded in 2011, Loopstudios has been producing world-class virtual reality
       projects for some of the best companies around the globe. Our award-winning
       creations have transformed businesses through digital experiences that bind
       to their brand.</p>
