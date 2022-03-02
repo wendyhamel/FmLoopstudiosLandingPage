@@ -4,6 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Tailwind play cdn for this challenge ( for development and play purposes ) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ['Alata', 'sans-serif'],
+          'heading': ['Josefin Sans', 'sans-serif'],
+        },
+        extend: {
+          colors: {
+            gray: 'hsl(0, 0%, 55%)',
+            dark: 'hsl(0, 0%, 41%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Alpine.js for minimal js to toggle the menu -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Loopstudios landing page</title>
@@ -15,45 +42,127 @@
   </style>
 </head>
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  Immersive experiences that deliver
-
-  The leader in interactive VR
-
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
-
-  Our creations
-
-  See all
-
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
-
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
+<header class="relative text-white">
+  <img class="absolute md:hidden" src="images/mobile/image-hero.jpg" alt="">
+  <img class="hidden md:block md:absolute" src="images/desktop/image-hero.jpg" alt="">
+  <div class="relative flex justify-between">
+    <div>
+      <img src="images/logo.svg" alt="loopstudios logo">
+      <h1 class="sr-only">Loopstudios</h1>
+    </div>
+    <nav>
+      <div
+          class="md:hidden"
+          x-data="{open : false}"
+      >
+        <button x-on:click="open = true">
+          <img src="images/icon-hamburger.svg" alt="open the menu">
+        </button>
+        <div
+            x-show="open"
+            x-transition.opacity.origin.top
+            style="display: hidden;"
+            class="fixed z-10 inset-0 bg-black text-white"
+        >
+          <div class="flex justify-between">
+            <img src="images/logo.svg" alt="loopstudios logo">
+            <button x-on:click="open = false">
+              <img src="images/icon-close.svg" alt="close the menu">
+            </button>
+          </div>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hidden md:flex">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <span class="relative font-heading uppercase">
+    Immersive experiences that deliver
+  </span>
+</header>
+<main >
+<section>
+  <img src="images/mobile/image-interactive.jpg" alt="man wearing vr-glasses">
+  <article>
+    <h2>The leader in interactive VR</h2>
+    <p> Founded in 2011, Loopstudios has been producing world-class virtual reality
+      projects for some of the best companies around the globe. Our award-winning
+      creations have transformed businesses through digital experiences that bind
+      to their brand.</p>
+  </article>
+</section>
+  <section>
+    <div>
+      <h2>Our creations</h2>
+      <button>See all</button>
+    </div>
+    <div>
+      <img src="images/mobile/image-deep-earth.jpg" alt="">
+      <h3>Deep earth</h3></div>
+    <div>
+      <img src="images/mobile/image-night-arcade.jpg" alt="">
+      <h3>Night arcade</h3></div>
+    <div>
+      <img src="images/mobile/image-soccer-team.jpg" alt="">
+      <h3>Soccer team VR</h3></div>
+    <div>
+      <img src="images/mobile/image-grid.jpg" alt="">
+      <h3>The grid</h3></div>
+    <div>
+      <img src="images/mobile/image-from-above.jpg" alt="">
+      <h3>From up above VR</h3></div>
+    <div>
+      <img src="images/mobile/image-pocket-borealis.jpg" alt="">
+      <h3>Pocket borealis</h3></div>
+    <div>
+      <img src="images/mobile/image-curiosity.jpg" alt="">
+      <h3>The curiosity</h3></div>
+    <div>
+      <img src="images/mobile/image-fisheye.jpg" alt="">
+      <h3>Make it fisheye</h3></div>
+  </section>
+</main>
+<footer class="bg-black text-white">
+ <div>
+   <div>
+     <img src="images/logo.svg" alt="loopstudios logo">
+   </div>
+   <div>
+     <a href="#"><img src="images/icon-facebook.svg" alt="facebook logo"></a>
+     <a href="#"><img src="images/icon-twitter.svg" alt="twitter logo"></a>
+     <a href="#"><img src="images/icon-pinterest.svg" alt="pinterest logo"></a>
+     <a href="#"><img src="images/icon-instagram.svg" alt="instagram logo"></a>
+   </div>
+   <div>
+     <ul>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Careers</a></li>
+       <li><a href="#">Events</a></li>
+       <li><a href="#">Products</a></li>
+       <li><a href="#">Support</a></li>
+     </ul>
+   </div>
+   <div><span>© 2021 Loopstudios. All rights reserved.</span></div>
+ </div>
 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+</footer>
 </body>
 </html>
