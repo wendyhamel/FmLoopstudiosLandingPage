@@ -9,16 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
+  <!-- Tailwind play cdn for this challenge ( for development and play purposes ) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <script defer src="./src/js/tailwind.config.js"></script>
 
   <script defer src="./src/js/content.js"></script>
+
+  <link rel="stylesheet" href="./src/css/output.css">
 
   <!-- Alpine.js  -->
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <link rel="stylesheet" href="./src/css/output.css">
 
   <title>Frontend Mentor | Loopstudios landing page</title>
 
@@ -26,8 +30,8 @@
 <body x-data="dataJS()">
 <header class="relative text-white">
   <picture>
-    <source srcset="images/desktop/image-hero.jpg" media="(min-width: 640px)">
-    <img class="object-cover w-full h-full" src="images/mobile/image-hero.jpg" alt="girl gaming with VR equipment">
+    <source srcset="./images/desktop/image-hero.jpg" media="(min-width: 640px)">
+    <img class="object-cover w-full h-full" src="./images/mobile/image-hero.jpg" alt="girl gaming with VR equipment">
   </picture>
   <div class="absolute inset-0 bg-black/25"></div>
   <div class="absolute z-10 top-0 inset-x-0 flex justify-between items-center gap-4 pt-8 px-6 max-w-[1200px] mx-auto xl:pt-16">
@@ -47,9 +51,9 @@
             class="fixed inset-0 bg-black text-white pt-8 px-6"
         >
           <div class="flex justify-between items-center gap-4 mb-32">
-            <img class="w-36 md:w-full" src="images/logo.svg" alt="loopstudios logo">
+            <img class="w-36 md:w-full" src="./images/logo.svg" alt="loopstudios logo">
             <button x-on:click="menuOpened = false">
-              <img src="images/icon-close.svg" alt="close the menu">
+              <img src="./images/icon-close.svg" alt="close the menu">
             </button>
           </div>
           <ul class="font-display uppercase text-xl space-y-4">
@@ -82,8 +86,8 @@
   <section class="mt-24 mx-6 md:mt-40 lg:flex">
     <div class="mb-10 lg:mb-0 md:flex-shrink-0">
       <picture>
-        <source srcset="images/desktop/image-interactive.jpg" media="(min-width: 640px)">
-        <img class="object-cover mx-auto w-full h-full" src="images/mobile/image-interactive.jpg" alt="image of the perfume">
+        <source srcset="./images/desktop/image-interactive.jpg" media="(min-width: 640px)">
+        <img class="object-cover mx-auto w-full h-full" src="./images/mobile/image-interactive.jpg" alt="image of the perfume">
       </picture>
     </div>
     <article class="text-center px-4 bg-white max-w-3xl mx-auto lg:-ml-40 lg:self-end lg:text-left lg:pl-24 lg:pt-24 lg:pr-8 lg:max-w-xl">
@@ -120,7 +124,7 @@
 <footer class="bg-black text-white pt-16">
  <div class="flex flex-col items-center gap-10 max-w-[1200px] mx-auto md:px-6 md:flex-row md:justify-between">
    <div class="flex flex-col items-center gap-8 md:items-start">
-     <img class="w-36" src="images/logo.svg" alt="loopstudios logo">
+     <img class="w-36" src="./images/logo.svg" alt="loopstudios logo">
      <ul class="flex flex-col items-center gap-4 md:flex-row">
        <template x-for="menuItem in menu" key="index">
          <li><a class="font-display pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" :href="menuItem.url" x-text="menuItem.title"></a></li>
@@ -139,7 +143,7 @@
  </div>
 
   <div class="text-center text-gray text-sm border-t border-dark mt-6 pt-2 px-4 pb-4">
-    Challenge by <a class="text-white hover:underline" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Challenge by <a class="text-white hover:underline" href="https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw" target="_blank">Frontend Mentor</a>.
     Coded by <a class="text-white hover:underline" href="https://www.frontendmentor.io/profile/wendyhamel" target="_blank">Wendy Hamel</a>.
   </div>
 </footer>
