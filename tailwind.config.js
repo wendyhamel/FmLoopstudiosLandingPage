@@ -1,4 +1,5 @@
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: ["index.html", "./src/content.js"],
   theme: {
     extend: {
@@ -15,5 +16,6 @@ tailwind.config = {
       }
     },
   },
+  plugins: [],
 }
 
