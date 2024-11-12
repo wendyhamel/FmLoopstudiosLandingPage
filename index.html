@@ -109,7 +109,7 @@
             <img class="md:block md:object-cover" :src="card.images.mobile" :alt="card.images.alt">
           </picture>
           <div class="absolute inset-0 bg-gradient-to-r from-black/50 md:bg-gradient-to-t group-hover:bg-white/[.6] group-focus:from-white/[.6] group-focus:bg-white/[.6] group-focus:from-white/[.6] ease-in-out duration-300">
-            <h3 class="absolute left-3 bottom-3 text-white font-display uppercase text-2xl leading-6 w-32 group-hover:text-black group-focus:text-black md:text-3xl md:w-40 md:left-8 md:bottom-8" x-text="card.title"></h3>
+            <h3 class="absolute left-3 bottom-3 text-white font-display uppercase text-2xl leading-6 group-hover:text-black group-focus:text-black md:text-3xl md:left-8 md:bottom-8" x-html="card.title"></h3>
           </div>
         </a>
       </template>

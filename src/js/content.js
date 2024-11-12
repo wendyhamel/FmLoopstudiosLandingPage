@@ -16,7 +16,7 @@ window.dataJS = function () {
 					desktop: 'images/desktop/image-deep-earth.jpg',
 					alt: 'Deep earth'
 				},
-				title: 'Deep earth',
+				title: "Deep <br/> earth",
 				url: '#'
 			},
 			{
@@ -26,7 +26,7 @@ window.dataJS = function () {
 					desktop: 'images/desktop/image-night-arcade.jpg',
 					alt: 'Night arcade'
 				},
-				title: 'Night arcade',
+				title: "Night <br/> arcade",
 				url: '#'
 			},
 			{
@@ -36,7 +36,7 @@ window.dataJS = function () {
 					desktop: 'images/desktop/image-soccer-team.jpg',
 					alt: 'Soccer team VR'
 				},
-				title: 'Soccer team VR',
+				title: "Soccer <br/> team VR",
 				url: '#'
 			},
 			{
@@ -46,7 +46,7 @@ window.dataJS = function () {
 					desktop: 'images/desktop/image-grid.jpg',
 					alt: 'The grid'
 				},
-				title: 'The grid',
+				title: "The <br/> grid",
 				url: '#'
 			},
 			{
@@ -56,7 +56,7 @@ window.dataJS = function () {
 					desktop: 'images/desktop/image-from-above.jpg',
 					alt: 'From up above VR'
 				},
-				title: 'From up above VR',
+				title: "From up <br/> above VR",
 				url: '#'
 			},
 			{
@@ -66,7 +66,7 @@ window.dataJS = function () {
 					desktop: 'images/desktop/image-pocket-borealis.jpg',
 					alt: 'Pocket borealis'
 				},
-				title: 'Pocket borealis',
+				title: "Pocket <br/> borealis",
 				url: '#'
 			},
 			{
@@ -76,7 +76,7 @@ window.dataJS = function () {
 					desktop: 'images/desktop/image-curiosity.jpg',
 					alt: 'The curiosity'
 				},
-				title: 'The curiosity',
+				title: "The <br/> curiosity",
 				url: '#'
 			},
 			{
@@ -86,7 +86,7 @@ window.dataJS = function () {
 					desktop: 'images/desktop/image-fisheye.jpg',
 					alt: 'Make it fisheye'
 				},
-				title: 'Make it fisheye',
+				title: "Make it <br/> fisheye",
 				url: '#'
 			},
 		]
