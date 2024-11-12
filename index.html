@@ -55,7 +55,9 @@
           </div>
           <ul class="font-display font-light uppercase text-xl space-y-4">
             <template x-for="menuItem in menu" :key="index">
-              <li><a class="pb-1 border-b-2 border-transparent hover:border-white" :href="menuItem.url" x-text="menuItem.title"></a></li>
+              <li>
+                <a class="border-b-2 border-transparent pb-1 hover:border-white focus:border-white ease-in-out duration-150" :href="menuItem.url" x-text="menuItem.title"></a>
+              </li>
             </template>
           </ul>
         </div>
@@ -63,7 +65,10 @@
       <div class="hidden md:block">
         <ul class="flex gap-6">
           <template x-for="menuItem in menu" :key="index">
-            <li><a class="pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" :href="menuItem.url" x-text="menuItem.title"></a></li>
+            <li class="group">
+              <a class="block pb-2" :href="menuItem.url" x-text="menuItem.title"></a>
+              <div class="h-0.5 bg-white w-full scale-x-0 group-hover:scale-x-100 ease-in-out duration-150"></div>
+            </li>
           </template>
         </ul>
       </div>
@@ -124,16 +129,31 @@
      <img class="w-36" src="./images/logo.svg" alt="loopstudios logo">
      <ul class="flex flex-col items-center gap-4 md:flex-row">
        <template x-for="menuItem in menu" key="index">
-         <li><a class="pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" :href="menuItem.url" x-text="menuItem.title"></a></li>
+         <li class="group">
+           <a class="block pb-1.5" :href="menuItem.url" x-text="menuItem.title"></a>
+           <div class="h-0.5 bg-white w-full scale-x-0 group-hover:scale-x-100 ease-in-out duration-150"></div>
+         </li>
        </template>
      </ul>
    </div>
    <div class="flex flex-col items-center gap-4 md:items-end">
      <div class="flex flex-row gap-4">
-       <a class="pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" href="#"><img src="images/icon-facebook.svg" alt="facebook logo"></a>
-       <a class="pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" href="#"><img src="images/icon-twitter.svg" alt="twitter logo"></a>
-       <a class="pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" href="#"><img src="images/icon-pinterest.svg" alt="pinterest logo"></a>
-       <a class="pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" href="#"><img src="images/icon-instagram.svg" alt="instagram logo"></a>
+       <a class="group grid gap-1.5" href="#">
+         <span class="block"><img src="images/icon-facebook.svg" alt="facebook logo"></span>
+         <div class="h-0.5 bg-white w-full scale-x-0 group-hover:scale-x-100 ease-in-out duration-150"></div>
+       </a>
+       <a class="group grid gap-1.5" href="#">
+         <span class="block"><img src="images/icon-twitter.svg" alt="twitter logo"></span>
+         <div class="h-0.5 bg-white w-full scale-x-0 group-hover:scale-x-100 ease-in-out duration-150"></div>
+       </a>
+       <a class="group grid gap-1.5" href="#">
+         <span class="block"><img src="images/icon-pinterest.svg" alt="pinterest logo"></span>
+         <div class="h-0.5 bg-white w-full scale-x-0 group-hover:scale-x-100 ease-in-out duration-150"></div>
+       </a>
+       <a class="group grid gap-1.5" href="#">
+         <span class="block"><img src="images/icon-instagram.svg" alt="instagram logo"></span>
+         <div class="h-0.5 bg-white w-full scale-x-0 group-hover:scale-x-100 ease-in-out duration-150"></div>
+       </a>
      </div>
      <span class="text-gray text-sm">© 2021 Loopstudios. All rights reserved.</span>
    </div>
