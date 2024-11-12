@@ -7,7 +7,8 @@
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
 
   <!-- Tailwind play cdn for this challenge ( for development and play purposes ) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -54,7 +55,7 @@
               <img src="./images/icon-close.svg" alt="close the menu">
             </button>
           </div>
-          <ul class="font-display uppercase text-xl space-y-4">
+          <ul class="font-display font-light uppercase text-xl space-y-4">
             <template x-for="menuItem in menu" :key="index">
               <li><a class="pb-1 border-b-2 border-transparent hover:border-white" :href="menuItem.url" x-text="menuItem.title"></a></li>
             </template>
@@ -73,7 +74,7 @@
   <div class="absolute inset-0 grid place-items-center max-w-[1200px] mx-auto md:place-items-stretch">
     <div class="h-full flex items-center">
       <div class="border-2 border-white py-6 px-7 mx-6 max-w-sm lg:max-w-2xl">
-        <span class="font-display uppercase leading-9 text-4xl lg:text-7xl">
+        <span class="font-display font-light uppercase leading-9 text-4xl lg:text-7xl">
           Immersive experiences that deliver
         </span>
       </div>
@@ -89,7 +90,7 @@
       </picture>
     </div>
     <article class="text-center px-4 bg-white max-w-3xl mx-auto lg:-ml-40 lg:self-end lg:text-left lg:pl-24 lg:pt-24 lg:pr-8 lg:max-w-xl">
-      <h2 class="font-display uppercase text-3xl mb-4 lg:mb-6 lg:text-4xl xl:text-5xl">The leader in interactive VR</h2>
+      <h2 class="font-display font-light uppercase text-3xl mb-4 lg:mb-6 lg:text-4xl xl:text-5xl">The leader in interactive VR</h2>
       <p class="text-body text-gray leading-relaxed"> Founded in 2011, Loopstudios has been producing world-class virtual reality
         projects for some of the best companies around the globe. Our award-winning
         creations have transformed businesses through digital experiences that bind
@@ -98,8 +99,8 @@
   </section>
   <section class="mt-20 md:mt-40 mx-6 pb-32">
     <div class="flex justify-center items-center mb-10 md:mb-20 md:justify-between md:gap-4">
-      <h2 class="font-display uppercase text-3xl lg:text-4xl xl:text-5xl">Our creations</h2>
-      <button class="hidden md:block md:uppercase md:border md:border-dark md:py-2 md:px-10 md:tracking-[.3em] md:hover:bg-black md:hover:text-white md:ease-in-out md:duration-150">See all</button>
+      <h2 class="font-display font-light uppercase text-3xl lg:text-4xl xl:text-5xl">Our creations</h2>
+      <button class="hidden md:block md:uppercase md:border-2 md:border-gray md:py-2 md:px-10 md:tracking-[.3em] md:hover:bg-black md:hover:text-white md:ease-in-out md:duration-150">See all</button>
     </div>
     <div class="flex flex-wrap gap-6 justify-center md:justify-center md:gap-10">
       <template x-for="card in cards" key="card.id">
@@ -109,13 +110,13 @@
             <img class="md:block md:object-cover" :src="card.images.mobile" :alt="card.images.alt">
           </picture>
           <div class="absolute inset-0 bg-gradient-to-r from-black/50 md:bg-gradient-to-t group-hover:bg-white/[.6] group-focus:from-white/[.6] group-focus:bg-white/[.6] group-focus:from-white/[.6] ease-in-out duration-300">
-            <h3 class="absolute left-3 bottom-3 text-white font-display uppercase text-2xl leading-6 group-hover:text-black group-focus:text-black md:text-3xl md:left-8 md:bottom-8" x-html="card.title"></h3>
+            <h3 class="absolute left-3 bottom-3 text-white font-display font-light uppercase text-2xl leading-6 group-hover:text-black group-focus:text-black md:text-3xl md:left-8 md:bottom-8" x-html="card.title"></h3>
           </div>
         </a>
       </template>
     </div>
     <div class="mt-8 flex justify-center md:hidden">
-      <button class="uppercase border border-dark py-2 px-10 tracking-[.3em] hover:bg-black hover:text-white ease-in-out duration-150">See all</button>
+      <button class="uppercase border-2 border-gray py-2 px-10 tracking-[.3em] hover:bg-black hover:text-white ease-in-out duration-150">See all</button>
     </div>
   </section>
 </main>
@@ -125,7 +126,7 @@
      <img class="w-36" src="./images/logo.svg" alt="loopstudios logo">
      <ul class="flex flex-col items-center gap-4 md:flex-row">
        <template x-for="menuItem in menu" key="index">
-         <li><a class="font-display pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" :href="menuItem.url" x-text="menuItem.title"></a></li>
+         <li><a class="pb-1 border-b-2 border-transparent hover:border-white ease-in-out duration-150" :href="menuItem.url" x-text="menuItem.title"></a></li>
        </template>
      </ul>
    </div>
